@@ -1,17 +1,22 @@
-<div class="row">
-    <div class="col-sm-4">
-      <h3>{{ stuff }}</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>You</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Whats Up?</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+
+<div class="jumbotron text-center">
+  <h1>{{ stock.companyName }} ({{ stock.symbol }})</h1>
+  <p><strong> Latest Price: $</strong>{{ stock.latestPrice }}<br/>
+<strong> Latest Time: </strong>{{ stock.latestTime }}<br/>
+<strong> Previous Close: </strong>{{ stock.previousClose}}<br/>
+<strong> Change: </strong>{{ stock.change }}<br/>
+<strong> Change Percent: </strong>{{ stock.changePercent }}<strong>%</strong><br/>
+<strong> Average Total Volume: </strong>{{ stock.avgTotalVolume }}<br/>
+<strong> Market Cap: $</strong>{{ stock.marketCap }}<br/>
+<strong> Per Ratio: </strong>{{ stock.peRatio }}<br/>
+<strong> Week 52 High: $</strong>{{ stock.week52High }}<br/></p>
 </div>
+
+
+</br>
+
+<!--
+{{#each stock}}
+    {{@key}} | {{this}}<br/>
+{{/each}}
+-->
